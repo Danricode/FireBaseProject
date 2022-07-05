@@ -1,10 +1,10 @@
-import React, { useState, useContext } from 'react';
-import { AuthContext } from '../navigation/AuthProvider';
-import { View, Text, StyleSheet } from 'react-native';
+import React, {useState, useContext} from 'react';
+import {AuthContext} from '../navigation/AuthProvider';
+import {View, Text, StyleSheet} from 'react-native';
 import FormButton from '../components/FormButton';
 import FormInput from '../components/FormInput';
 export default function SignupScreen({navigation}) {
-  const { register } = useContext(AuthContext);
+  const {register} = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return (
@@ -12,20 +12,20 @@ export default function SignupScreen({navigation}) {
       <Text style={styles.text}>Create an account</Text>
       <FormInput
         value={email}
-        placeholderText='Email'
+        placeholderText="Email"
         onChangeText={userEmail => setEmail(userEmail)}
-        autoCapitalize='none'
-        keyboardType='email-address'
+        autoCapitalize="none"
+        keyboardType="email-address"
         autoCorrect={false}
       />
       <FormInput
         value={password}
-        placeholderText='Password'
+        placeholderText="Password"
         onChangeText={userPassword => setPassword(userPassword)}
         secureTextEntry={true}
       />
-       <FormButton
-        buttonTitle='Signup'
+      <FormButton
+        buttonTitle="Signup"
         onPress={() => register(email, password)}
       />
     </View>
@@ -36,11 +36,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   text: {
     fontSize: 24,
     marginBottom: 10,
-    color:"black"
-  }
+    color: 'black',
+  },
 });

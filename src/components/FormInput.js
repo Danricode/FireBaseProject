@@ -1,14 +1,14 @@
 import React from 'react';
-import { StyleSheet, TextInput } from 'react-native';
-import { windowHeight, windowWidth } from '../utils/Dimensions';
-export default function FormInput({ labelValue, placeholderText, ...rest }) {
+import {StyleSheet, TextInput} from 'react-native';
+import {windowHeight, windowWidth} from '../utils/Dimensions';
+export default function FormInput({labelValue, placeholderText, ...rest}) {
   return (
     <TextInput
       value={labelValue}
       style={styles.input}
       numberOfLines={1}
       placeholder={placeholderText}
-      placeholderTextColor='grey'
+      placeholderTextColor="grey"
       {...rest}
     />
   );
@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     borderRadius: 8,
     borderWidth: 1,
-    backgroundColor:"black"
-  }
+    backgroundColor: 'black',
+  },
 });
