@@ -3,11 +3,14 @@ import {View, Text, StyleSheet} from 'react-native';
 import FormButton from '../components/FormButton';
 import {AuthContext} from '../navigation/AuthProvider';
 export default function HomeScreen() {
-  const {user, logout} = useContext(AuthContext);
+  const {user, logout, deleteUser} = useContext(AuthContext);
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Welcome user {user.uid}</Text>
       <FormButton buttonTitle="Logout" onPress={() => logout()} />
+      <FormButton buttonTitle="Delete User" onPress={() => deleteUser()} />
+
+     
     </View>
   );
 }
